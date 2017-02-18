@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB3F1E58161F00773D59 /* AppDelegate.swift */; };
+		BBCADB421E58161F00773D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB411E58161F00773D59 /* ViewController.swift */; };
+		BBCADB451E58161F00773D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB431E58161F00773D59 /* Main.storyboard */; };
+		BBCADB471E58161F00773D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB461E58161F00773D59 /* Assets.xcassets */; };
+		BBCADB4A1E58161F00773D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */; };
+		BBCADB551E58162000773D59 /* RobotJoystickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB541E58162000773D59 /* RobotJoystickTests.swift */; };
+		BBCADB601E58162000773D59 /* RobotJoystickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBCADB511E58161F00773D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBCADB341E58161F00773D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBCADB3B1E58161F00773D59;
+			remoteInfo = RobotJoystick;
+		};
+		BBCADB5C1E58162000773D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBCADB341E58161F00773D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBCADB3B1E58161F00773D59;
+			remoteInfo = RobotJoystick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBCADB3C1E58161F00773D59 /* RobotJoystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotJoystick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCADB3F1E58161F00773D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBCADB411E58161F00773D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBCADB441E58161F00773D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBCADB461E58161F00773D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBCADB491E58161F00773D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBCADB4B1E58161F00773D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCADB501E58161F00773D59 /* RobotJoystickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotJoystickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCADB541E58162000773D59 /* RobotJoystickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotJoystickTests.swift; sourceTree = "<group>"; };
+		BBCADB561E58162000773D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCADB5B1E58162000773D59 /* RobotJoystickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotJoystickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotJoystickUITests.swift; sourceTree = "<group>"; };
+		BBCADB611E58162000773D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBCADB391E58161F00773D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCADB4D1E58161F00773D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCADB581E58162000773D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBCADB331E58161F00773D59 = {
+			isa = PBXGroup;
+			children = (
+				BBCADB3E1E58161F00773D59 /* RobotJoystick */,
+				BBCADB531E58162000773D59 /* RobotJoystickTests */,
+				BBCADB5E1E58162000773D59 /* RobotJoystickUITests */,
+				BBCADB3D1E58161F00773D59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBCADB3D1E58161F00773D59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBCADB3C1E58161F00773D59 /* RobotJoystick.app */,
+				BBCADB501E58161F00773D59 /* RobotJoystickTests.xctest */,
+				BBCADB5B1E58162000773D59 /* RobotJoystickUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBCADB3E1E58161F00773D59 /* RobotJoystick */ = {
+			isa = PBXGroup;
+			children = (
+				BBCADB3F1E58161F00773D59 /* AppDelegate.swift */,
+				BBCADB411E58161F00773D59 /* ViewController.swift */,
+				BBCADB431E58161F00773D59 /* Main.storyboard */,
+				BBCADB461E58161F00773D59 /* Assets.xcassets */,
+				BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */,
+				BBCADB4B1E58161F00773D59 /* Info.plist */,
+			);
+			path = RobotJoystick;
+			sourceTree = "<group>";
+		};
+		BBCADB531E58162000773D59 /* RobotJoystickTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBCADB541E58162000773D59 /* RobotJoystickTests.swift */,
+				BBCADB561E58162000773D59 /* Info.plist */,
+			);
+			path = RobotJoystickTests;
+			sourceTree = "<group>";
+		};
+		BBCADB5E1E58162000773D59 /* RobotJoystickUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */,
+				BBCADB611E58162000773D59 /* Info.plist */,
+			);
+			path = RobotJoystickUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBCADB3B1E58161F00773D59 /* RobotJoystick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCADB641E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystick" */;
+			buildPhases = (
+				BBCADB381E58161F00773D59 /* Sources */,
+				BBCADB391E58161F00773D59 /* Frameworks */,
+				BBCADB3A1E58161F00773D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RobotJoystick;
+			productName = RobotJoystick;
+			productReference = BBCADB3C1E58161F00773D59 /* RobotJoystick.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBCADB4F1E58161F00773D59 /* RobotJoystickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCADB671E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystickTests" */;
+			buildPhases = (
+				BBCADB4C1E58161F00773D59 /* Sources */,
+				BBCADB4D1E58161F00773D59 /* Frameworks */,
+				BBCADB4E1E58161F00773D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBCADB521E58161F00773D59 /* PBXTargetDependency */,
+			);
+			name = RobotJoystickTests;
+			productName = RobotJoystickTests;
+			productReference = BBCADB501E58161F00773D59 /* RobotJoystickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBCADB5A1E58162000773D59 /* RobotJoystickUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCADB6A1E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystickUITests" */;
+			buildPhases = (
+				BBCADB571E58162000773D59 /* Sources */,
+				BBCADB581E58162000773D59 /* Frameworks */,
+				BBCADB591E58162000773D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBCADB5D1E58162000773D59 /* PBXTargetDependency */,
+			);
+			name = RobotJoystickUITests;
+			productName = RobotJoystickUITests;
+			productReference = BBCADB5B1E58162000773D59 /* RobotJoystickUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBCADB341E58161F00773D59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "James Asefa";
+				TargetAttributes = {
+					BBCADB3B1E58161F00773D59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KF8CEJ9QD6;
+						ProvisioningStyle = Automatic;
+					};
+					BBCADB4F1E58161F00773D59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KF8CEJ9QD6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BBCADB3B1E58161F00773D59;
+					};
+					BBCADB5A1E58162000773D59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KF8CEJ9QD6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BBCADB3B1E58161F00773D59;
+					};
+				};
+			};
+			buildConfigurationList = BBCADB371E58161F00773D59 /* Build configuration list for PBXProject "RobotJoystick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBCADB331E58161F00773D59;
+			productRefGroup = BBCADB3D1E58161F00773D59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBCADB3B1E58161F00773D59 /* RobotJoystick */,
+				BBCADB4F1E58161F00773D59 /* RobotJoystickTests */,
+				BBCADB5A1E58162000773D59 /* RobotJoystickUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBCADB3A1E58161F00773D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCADB4A1E58161F00773D59 /* LaunchScreen.storyboard in Resources */,
+				BBCADB471E58161F00773D59 /* Assets.xcassets in Resources */,
+				BBCADB451E58161F00773D59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCADB4E1E58161F00773D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCADB591E58162000773D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBCADB381E58161F00773D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCADB421E58161F00773D59 /* ViewController.swift in Sources */,
+				BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCADB4C1E58161F00773D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCADB551E58162000773D59 /* RobotJoystickTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCADB571E58162000773D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCADB601E58162000773D59 /* RobotJoystickUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBCADB521E58161F00773D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBCADB3B1E58161F00773D59 /* RobotJoystick */;
+			targetProxy = BBCADB511E58161F00773D59 /* PBXContainerItemProxy */;
+		};
+		BBCADB5D1E58162000773D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBCADB3B1E58161F00773D59 /* RobotJoystick */;
+			targetProxy = BBCADB5C1E58162000773D59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBCADB431E58161F00773D59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBCADB441E58161F00773D59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBCADB491E58161F00773D59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBCADB621E58162000773D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBCADB631E58162000773D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBCADB651E58162000773D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KF8CEJ9QD6;
+				INFOPLIST_FILE = RobotJoystick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamesasefa.RobotJoystick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BBCADB661E58162000773D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KF8CEJ9QD6;
+				INFOPLIST_FILE = RobotJoystick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamesasefa.RobotJoystick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BBCADB681E58162000773D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KF8CEJ9QD6;
+				INFOPLIST_FILE = RobotJoystickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamesasefa.RobotJoystickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RobotJoystick.app/RobotJoystick";
+			};
+			name = Debug;
+		};
+		BBCADB691E58162000773D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KF8CEJ9QD6;
+				INFOPLIST_FILE = RobotJoystickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamesasefa.RobotJoystickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RobotJoystick.app/RobotJoystick";
+			};
+			name = Release;
+		};
+		BBCADB6B1E58162000773D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KF8CEJ9QD6;
+				INFOPLIST_FILE = RobotJoystickUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamesasefa.RobotJoystickUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RobotJoystick;
+			};
+			name = Debug;
+		};
+		BBCADB6C1E58162000773D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KF8CEJ9QD6;
+				INFOPLIST_FILE = RobotJoystickUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamesasefa.RobotJoystickUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RobotJoystick;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBCADB371E58161F00773D59 /* Build configuration list for PBXProject "RobotJoystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCADB621E58162000773D59 /* Debug */,
+				BBCADB631E58162000773D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBCADB641E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCADB651E58162000773D59 /* Debug */,
+				BBCADB661E58162000773D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBCADB671E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCADB681E58162000773D59 /* Debug */,
+				BBCADB691E58162000773D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBCADB6A1E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystickUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCADB6B1E58162000773D59 /* Debug */,
+				BBCADB6C1E58162000773D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBCADB341E58161F00773D59 /* Project object */;
+}
