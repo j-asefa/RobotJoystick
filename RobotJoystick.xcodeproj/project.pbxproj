@@ -14,6 +14,7 @@
 		BBCADB4A1E58161F00773D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */; };
 		BBCADB551E58162000773D59 /* RobotJoystickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB541E58162000773D59 /* RobotJoystickTests.swift */; };
 		BBCADB601E58162000773D59 /* RobotJoystickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */; };
+		BBDC8D771E5C247700D4DD55 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC8D761E5C247700D4DD55 /* Joystick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BBCADB5B1E58162000773D59 /* RobotJoystickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotJoystickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotJoystickUITests.swift; sourceTree = "<group>"; };
 		BBCADB611E58162000773D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDC8D761E5C247700D4DD55 /* Joystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BBCADB3F1E58161F00773D59 /* AppDelegate.swift */,
+				BBDC8D761E5C247700D4DD55 /* Joystick.swift */,
 				BBCADB411E58161F00773D59 /* ViewController.swift */,
 				BBCADB431E58161F00773D59 /* Main.storyboard */,
 				BBCADB461E58161F00773D59 /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDC8D771E5C247700D4DD55 /* Joystick.swift in Sources */,
 				BBCADB421E58161F00773D59 /* ViewController.swift in Sources */,
 				BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */,
 			);
@@ -512,6 +516,7 @@
 				BBCADB661E58162000773D59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBCADB671E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystickTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +525,7 @@
 				BBCADB691E58162000773D59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBCADB6A1E58162000773D59 /* Build configuration list for PBXNativeTarget "RobotJoystickUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +534,7 @@
 				BBCADB6C1E58162000773D59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
