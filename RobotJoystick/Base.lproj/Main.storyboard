@@ -20,18 +20,10 @@
                     <view key="view" contentMode="scaleToFill" id="q4I-Xb-Nmz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-w8-Kot" customClass="Joystick" customModule="RobotJoystick" customModuleProvider="target">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.01856123576179947" green="0.0005335504523078015" blue="0.16753926701570676" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
                     <connections>
-                        <outlet property="joystick" destination="hqa-w8-Kot" id="KoH-ue-qI4"/>
                         <outlet property="outerView" destination="q4I-Xb-Nmz" id="oFF-jr-T1r"/>
                     </connections>
                 </viewController>

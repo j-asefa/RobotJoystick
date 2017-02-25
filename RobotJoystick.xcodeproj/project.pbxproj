@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB1EDF521E624EB4004CBE49 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EDF511E624EB4004CBE49 /* Joystick.swift */; };
 		BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB3F1E58161F00773D59 /* AppDelegate.swift */; };
 		BBCADB421E58161F00773D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB411E58161F00773D59 /* ViewController.swift */; };
 		BBCADB451E58161F00773D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB431E58161F00773D59 /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB1EDF511E624EB4004CBE49 /* Joystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
 		BBCADB3C1E58161F00773D59 /* RobotJoystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotJoystick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCADB3F1E58161F00773D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBCADB411E58161F00773D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				BBDC8D7A1E5F78EE00D4DD55 /* BTPeripheralManager.swift */,
 				BBCADB411E58161F00773D59 /* ViewController.swift */,
 				BBCADB431E58161F00773D59 /* Main.storyboard */,
-				BB1EDF511E624EB4004CBE49 /* Joystick.swift */,
 				BBCADB461E58161F00773D59 /* Assets.xcassets */,
 				BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */,
 				BBCADB4B1E58161F00773D59 /* Info.plist */,
@@ -273,7 +270,6 @@
 			files = (
 				BBDC8D7B1E5F78EE00D4DD55 /* BTPeripheralManager.swift in Sources */,
 				BBCADB421E58161F00773D59 /* ViewController.swift in Sources */,
-				BB1EDF521E624EB4004CBE49 /* Joystick.swift in Sources */,
 				BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */,
 				BBDC8D791E5F739900D4DD55 /* BTCentralManager.swift in Sources */,
 			);
