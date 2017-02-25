@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ExternalAccessory
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

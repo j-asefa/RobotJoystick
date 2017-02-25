@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1EDF521E624EB4004CBE49 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EDF511E624EB4004CBE49 /* Joystick.swift */; };
 		BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB3F1E58161F00773D59 /* AppDelegate.swift */; };
 		BBCADB421E58161F00773D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB411E58161F00773D59 /* ViewController.swift */; };
 		BBCADB451E58161F00773D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB431E58161F00773D59 /* Main.storyboard */; };
@@ -14,7 +15,8 @@
 		BBCADB4A1E58161F00773D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */; };
 		BBCADB551E58162000773D59 /* RobotJoystickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB541E58162000773D59 /* RobotJoystickTests.swift */; };
 		BBCADB601E58162000773D59 /* RobotJoystickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */; };
-		BBDC8D771E5C247700D4DD55 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC8D761E5C247700D4DD55 /* Joystick.swift */; };
+		BBDC8D791E5F739900D4DD55 /* BTCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC8D781E5F739900D4DD55 /* BTCentralManager.swift */; };
+		BBDC8D7B1E5F78EE00D4DD55 /* BTPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC8D7A1E5F78EE00D4DD55 /* BTPeripheralManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1EDF511E624EB4004CBE49 /* Joystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
 		BBCADB3C1E58161F00773D59 /* RobotJoystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotJoystick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCADB3F1E58161F00773D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBCADB411E58161F00773D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +51,8 @@
 		BBCADB5B1E58162000773D59 /* RobotJoystickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotJoystickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCADB5F1E58162000773D59 /* RobotJoystickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotJoystickUITests.swift; sourceTree = "<group>"; };
 		BBCADB611E58162000773D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBDC8D761E5C247700D4DD55 /* Joystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
+		BBDC8D781E5F739900D4DD55 /* BTCentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCentralManager.swift; sourceTree = "<group>"; };
+		BBDC8D7A1E5F78EE00D4DD55 /* BTPeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTPeripheralManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				BBCADB3F1E58161F00773D59 /* AppDelegate.swift */,
-				BBDC8D761E5C247700D4DD55 /* Joystick.swift */,
+				BBDC8D781E5F739900D4DD55 /* BTCentralManager.swift */,
+				BBDC8D7A1E5F78EE00D4DD55 /* BTPeripheralManager.swift */,
 				BBCADB411E58161F00773D59 /* ViewController.swift */,
 				BBCADB431E58161F00773D59 /* Main.storyboard */,
+				BB1EDF511E624EB4004CBE49 /* Joystick.swift */,
 				BBCADB461E58161F00773D59 /* Assets.xcassets */,
 				BBCADB481E58161F00773D59 /* LaunchScreen.storyboard */,
 				BBCADB4B1E58161F00773D59 /* Info.plist */,
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDC8D771E5C247700D4DD55 /* Joystick.swift in Sources */,
+				BBDC8D7B1E5F78EE00D4DD55 /* BTPeripheralManager.swift in Sources */,
 				BBCADB421E58161F00773D59 /* ViewController.swift in Sources */,
+				BB1EDF521E624EB4004CBE49 /* Joystick.swift in Sources */,
 				BBCADB401E58161F00773D59 /* AppDelegate.swift in Sources */,
+				BBDC8D791E5F739900D4DD55 /* BTCentralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

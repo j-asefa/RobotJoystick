@@ -20,22 +20,22 @@
                     <view key="view" contentMode="scaleToFill" id="q4I-Xb-Nmz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-w8-Kot" customClass="Joystick" customModule="RobotJoystick" customModuleProvider="target">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.01856123576179947" green="0.0005335504523078015" blue="0.16753926701570676" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="g4v-VI-vSO" appends="YES" id="etu-Bs-ikx"/>
-                        </connections>
                     </view>
                     <connections>
+                        <outlet property="joystick" destination="hqa-w8-Kot" id="KoH-ue-qI4"/>
                         <outlet property="outerView" destination="q4I-Xb-Nmz" id="oFF-jr-T1r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <gestureRecognizer id="g4v-VI-vSO" customClass="Joystick" customModule="RobotJoystick" customModuleProvider="target">
-                    <connections>
-                        <action selector="UIJoystickRecognizer:" destination="BYZ-38-t0r" id="hUU-Dg-hoP"/>
-                    </connections>
-                </gestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
