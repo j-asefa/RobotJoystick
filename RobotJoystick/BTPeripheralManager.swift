@@ -76,7 +76,7 @@ class BTPeripheralManager: NSObject, CBPeripheralDelegate {
         self.updateConnectionStatus(true)
     }
     
-    func writeToRobot(_ speed: UInt8, direction: UInt8) {
+    func writeToRobot(_ positionx: UInt8, positiony: UInt8) {
         if (txCharacteristic == nil){
             print("Unable to write data without txcharacteristic")
             return
@@ -100,11 +100,40 @@ class BTPeripheralManager: NSObject, CBPeripheralDelegate {
             return
         }
         
-        
-        print(speed)
-        print(direction)
         if let txCharacteristic = self.txCharacteristic {
-            let data = Data(bytes: [speed, direction])
+            let data = Data(bytes: [positionx, positiony])
+            self.peripheral?.writeValue(data, for: txCharacteristic, type: writeType)
+        }
+    }
+    
+    // write the value 255 to robot signifying that the next byte
+    // represents a negative number
+    func writeLeadingNegativeByteToRobot() {
+        if (txCharacteristic == nil){
+            print("Unable to write data without txcharacteristic")
+            return
+        }
+        
+        var writeType:CBCharacteristicWriteType
+        
+        if (txCharacteristic!.properties.rawValue & CBCharacteristicProperties.writeWithoutResponse.rawValue) != 0 {
+            
+            writeType = CBCharacteristicWriteType.withoutResponse
+            
+        }
+            
+        else if ((txCharacteristic!.properties.rawValue & CBCharacteristicProperties.write.rawValue) != 0){
+            
+            writeType = CBCharacteristicWriteType.withResponse
+        }
+            
+        else{
+            print("Unable to write data without characteristic write property")
+            return
+        }
+        
+        if let txCharacteristic = self.txCharacteristic {
+            let data = Data(bytes: [255])
             self.peripheral?.writeValue(data, for: txCharacteristic, type: writeType)
         }
     }

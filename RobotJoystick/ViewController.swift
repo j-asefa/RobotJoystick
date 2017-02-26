@@ -11,13 +11,16 @@ import QuartzCore
 
 class ViewController: UIViewController {
     
+    //MARK: instance variables
     var timerTXDelay: Timer?
     var allowTX = true
     var lastPositionx: CGFloat = 255.0
     var lastPositiony: CGFloat = 255.0
+    
     //var validTouch: Bool = true
     
     //MARK: Properties
+
     @IBOutlet var outerView: UIView!
     
     override func viewDidLoad() {
@@ -86,26 +89,42 @@ class ViewController: UIViewController {
         
         if let bleService = btDiscoverySharedInstance.peripheralService {
             
-            var x = position1
-            var y = position2
+            let xAxis = outerView.frame.width / 2
+            let yAxis = outerView.frame.height / 2
+            
+            // initialize x and y
+            var x = CGFloat(0.0)
+            var y = CGFloat(0.0)
+            
+            
+            // only convert if we're not writing a touchEnded value
+            if (position1 != 0.0 && position2 != 0.0) {
+                x = position1 - xAxis // relative to x axis
+                y = yAxis - position2 // relative to y axis
+            }
+            
+            print(x)
+            print(y)
             
             if (x < 0) {
-                x = 0
+                bleService.writeLeadingNegativeByteToRobot() 
+                x = -x
             }
             
             if (y < 0) {
-                y = 0
+                bleService.writeLeadingNegativeByteToRobot()
+                y = -y
             }
             
-            if (x > 255) {
-                x = 255
+            if (x >= 250) {
+                x = 250
             }
             
-            if (y > 255) {
-                y = 255
+            if (y >= 250) {
+                y = 250
             }
             
-            bleService.writeToRobot(UInt8(x), direction: UInt8(y))
+            bleService.writeToRobot(UInt8(x), positiony: UInt8(y))
             lastPositionx = x;
             lastPositiony = y;
             
