@@ -22,14 +22,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pi0-MT-QUQ" customClass="Axes" customModule="RobotJoystick" customModuleProvider="target">
-                                <rect key="frame" x="16" y="283" width="288" height="7"/>
+                                <rect key="frame" x="0.0" y="284" width="320" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.12646780209766839" blue="0.035914795347939732" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.20659011389597437" blue="0.0" alpha="0.61051085992907805" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcH-FJ-Zoy" customClass="Axes" customModule="RobotJoystick" customModuleProvider="target">
-                                <rect key="frame" x="158" y="20" width="4" height="528"/>
+                                <rect key="frame" x="158" y="0.0" width="2" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.026776288516049629" blue="0.0056768958481800968" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.20659011390000001" blue="0.0" alpha="0.61051085989999998" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.01856123576179947" green="0.0005335504523078015" blue="0.16753926701570676" alpha="1" colorSpace="calibratedRGB"/>

@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     var allowTX = true
     var lastPositionx: CGFloat = 255.0
     var lastPositiony: CGFloat = 255.0
+    var xAxis: CGFloat = 0
+    var yAxis: CGFloat = 0
+    var path = UIBezierPath(ovalIn: CGRect(x: 0, y:0, width: 10, height:10))
+    let shapeLayer = CAShapeLayer() // for drawings
     
     //var validTouch: Bool = true
     
@@ -25,6 +29,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        xAxis = outerView.frame.width / 2
+        yAxis = outerView.frame.height / 2
+        
+        path = UIBezierPath(ovalIn: CGRect(x: xAxis, y:yAxis, width: 10, height:10))
+        path = UIBezierPath()
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.connectionChanged(_:)), name: NSNotification.Name(rawValue: BLEServiceChangedStatusNotification), object: nil)
        _ = btDiscoverySharedInstance
@@ -59,6 +69,7 @@ class ViewController: UIViewController {
         if let touch = touches.first {
             let position = touch.location(in: outerView)
             writePosition(position.x,position2: position.y)
+            path.move(to: CGPoint(x: position.x, y: position.y))
         }
     }
     
@@ -66,6 +77,14 @@ class ViewController: UIViewController {
         if let touch = touches.first {
             let position = touch.location(in: outerView)
             writePosition(position.x,position2: position.y)
+            path.addLine(to: CGPoint(x: position.x, y: position.y))
+            
+            //Design path in layer
+            shapeLayer.path = path.cgPath
+            shapeLayer.strokeColor =  UIColor.red.cgColor
+            shapeLayer.fillColor = UIColor.clear.cgColor
+            shapeLayer.lineWidth = 10.0
+            outerView.layer.addSublayer(shapeLayer)
         }
     }
     
@@ -73,6 +92,11 @@ class ViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.timerTXDelayElapsed()
         writePosition(CGFloat(0.0),position2: CGFloat(0.0))
+        path.removeAllPoints()
+        path = UIBezierPath()
+        outerView.setNeedsDisplay()
+        shapeLayer.removeAllAnimations()
+        shapeLayer.removeFromSuperlayer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -88,9 +112,6 @@ class ViewController: UIViewController {
         }
         
         if let bleService = btDiscoverySharedInstance.peripheralService {
-            
-            let xAxis = outerView.frame.width / 2
-            let yAxis = outerView.frame.height / 2
             
             // initialize x and y
             var x = CGFloat(0.0)
