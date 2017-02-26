@@ -11,7 +11,7 @@ import QuartzCore
 
 class ViewController: UIViewController {
     
-    //MARK: instance variables
+    //MARK: mutable instance variables
     var timerTXDelay: Timer?
     var allowTX = true
     var lastPositionx: CGFloat = 255.0
@@ -19,22 +19,34 @@ class ViewController: UIViewController {
     var xAxis: CGFloat = 0
     var yAxis: CGFloat = 0
     var path = UIBezierPath(ovalIn: CGRect(x: 0, y:0, width: 10, height:10))
+    var validTouch = Bool()
+    var lastTouch = Bool()
+    var midpoint = 0
+    
+    //MARK: immutable instance variables
+    let joystickSize = 100
     let shapeLayer = CAShapeLayer() // for drawings
     
-    //var validTouch: Bool = true
-    
     //MARK: Properties
-
     @IBOutlet var outerView: UIView!
     
+    //MARK: View functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
         xAxis = outerView.frame.width / 2
         yAxis = outerView.frame.height / 2
+        midpoint = joystickSize / 2
+        shapeLayer.frame = CGRect(x: (Int(xAxis) - midpoint), y:(Int(yAxis) - midpoint), width: joystickSize, height:joystickSize)
         
-        path = UIBezierPath(ovalIn: CGRect(x: xAxis, y:yAxis, width: 10, height:10))
-        path = UIBezierPath()
+        path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: joystickSize, height:joystickSize))
+        shapeLayer.path = path.cgPath
+        shapeLayer.strokeColor =  UIColor.red.cgColor
+        shapeLayer.fillColor = UIColor.red.cgColor
+        outerView.layer.addSublayer(shapeLayer)
+        
+        validTouch = false
+        lastTouch = false
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.connectionChanged(_:)), name: NSNotification.Name(rawValue: BLEServiceChangedStatusNotification), object: nil)
        _ = btDiscoverySharedInstance
@@ -67,36 +79,25 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
+            lastTouch = false
             let position = touch.location(in: outerView)
             writePosition(position.x,position2: position.y)
-            path.move(to: CGPoint(x: position.x, y: position.y))
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
+            lastTouch = false
             let position = touch.location(in: outerView)
             writePosition(position.x,position2: position.y)
-            path.addLine(to: CGPoint(x: position.x, y: position.y))
-            
-            //Design path in layer
-            shapeLayer.path = path.cgPath
-            shapeLayer.strokeColor =  UIColor.red.cgColor
-            shapeLayer.fillColor = UIColor.clear.cgColor
-            shapeLayer.lineWidth = 10.0
-            outerView.layer.addSublayer(shapeLayer)
         }
     }
     
     // want to send speed of 0 and reset joystick to middle
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lastTouch = true
         self.timerTXDelayElapsed()
         writePosition(CGFloat(0.0),position2: CGFloat(0.0))
-        path.removeAllPoints()
-        path = UIBezierPath()
-        outerView.setNeedsDisplay()
-        shapeLayer.removeAllAnimations()
-        shapeLayer.removeFromSuperlayer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -111,52 +112,79 @@ class ViewController: UIViewController {
             return
         }
         
-        if let bleService = btDiscoverySharedInstance.peripheralService {
-            
-            // initialize x and y
-            var x = CGFloat(0.0)
-            var y = CGFloat(0.0)
-            
-            
-            // only convert if we're not writing a touchEnded value
-            if (position1 != 0.0 && position2 != 0.0) {
-                x = position1 - xAxis // relative to x axis
-                y = yAxis - position2 // relative to y axis
-            }
-            
-            print(x)
-            print(y)
-            
-            if (x < 0) {
-                bleService.writeLeadingNegativeByteToRobot() 
-                x = -x
-            }
-            
-            if (y < 0) {
-                bleService.writeLeadingNegativeByteToRobot()
-                y = -y
-            }
-            
-            if (x >= 250) {
-                x = 250
-            }
-            
-            if (y >= 250) {
-                y = 250
-            }
-            
-            bleService.writeToRobot(UInt8(x), positiony: UInt8(y))
-            lastPositionx = x;
-            lastPositiony = y;
-            
-            // Start delay timer
-            allowTX = false
-            if timerTXDelay == nil {
-                timerTXDelay = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.timerTXDelayElapsed), userInfo: nil, repeats: false)
-            }
-        } else {
+        guard let bleService = btDiscoverySharedInstance.peripheralService else {
             print("nothing from peripheral")
+            return
         }
+        
+        if (shapeLayer.contains(CGPoint(x: position1, y: position1))){
+            validTouch = true
+        } else {
+            validTouch = false
+        }
+        
+        // initialize x and y
+        var x = CGFloat(0.0)
+        var y = CGFloat(0.0)
+        
+        
+        // only convert if we're not writing a touchEnded value
+        if (position1 != 0.0 && position2 != 0.0) {
+            x = position1 - xAxis // relative to x axis
+            y = yAxis - position2 // relative to y axis
+        }
+        
+        if (x < 0) {
+            bleService.writeLeadingNegativeByteToRobot()
+            x = -x
+        }
+        
+        if (y < 0) {
+            bleService.writeLeadingNegativeByteToRobot()
+            y = -y
+        }
+        
+        if (x >= 250) {
+            x = 250
+        }
+        
+        if (y >= 250) {
+            y = 250
+        }
+        
+        
+        //print(validTouch)
+        //print(position1)
+        //print(position2)
+        
+        redrawCircle(position1, y: position2)
+        bleService.writeToRobot(UInt8(x), positiony: UInt8(y))
+        lastPositionx = x;
+        lastPositiony = y;
+        
+        // Start delay timer
+        allowTX = false
+        if timerTXDelay == nil {
+            timerTXDelay = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.timerTXDelayElapsed), userInfo: nil, repeats: false)
+        }
+    }
+    
+    func redrawCircle(_ x: CGFloat, y: CGFloat) {
+        path.removeAllPoints()
+        outerView.setNeedsDisplay()
+        shapeLayer.removeAllAnimations()
+        shapeLayer.removeFromSuperlayer()
+        if (lastTouch) {
+            shapeLayer.frame = CGRect(x: (Int(xAxis) - midpoint), y:(Int(yAxis) - midpoint), width: joystickSize, height:joystickSize)
+        } else {
+            shapeLayer.frame = CGRect(x: (Int(x) - midpoint), y:(Int(y) - midpoint), width: joystickSize, height:joystickSize)
+        }
+        
+        path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: joystickSize, height:joystickSize))
+        shapeLayer.path = path.cgPath
+        shapeLayer.strokeColor =  UIColor.red.cgColor
+        shapeLayer.fillColor = UIColor.red.cgColor
+        outerView.layer.addSublayer(shapeLayer)
     }
     
     func timerTXDelayElapsed() {
